@@ -24,9 +24,9 @@ sudo systemctl enable ly.service
 
 if grep -qi "EndeavourOS" /etc/os-release; then
     echo "${INFO} EndeavourOS detected, removing GRUB theme"
-    cp /etc/default/grub /etc/default/grub.bak
-    sudo sed -i 's|.*GRUB_THEME=.*|#GRUB_THEME=|' /etc/default/grub
-    grub-mkconfig -o /boot/grub/grub.cfg
+    sudo cp /etc/default/grub /etc/default/grub.bak
+    sudo sed -i 's|.*GRUB_BACKGROUND=.*|#GRUB_BACKGROUND=|' /etc/default/grub
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
 clear

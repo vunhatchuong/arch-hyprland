@@ -13,7 +13,7 @@ _installWithYay "dotter-rs-bin"
 
 printf "${INFO} Cloning dotfiles repository...\n"
 if git clone https://github.com/vunhatchuong/.dotfiles.git "$HOME/.dotfiles"; then
-    cp -r "$HOME/Arch-Hyprland/assets/local.toml" "$HOME/.dotfiles/.dotter/"
+    cp -r "$HOME/arch-hyprland/assets/local.toml" "$HOME/.dotfiles/.dotter/"
     cd "$HOME/.dotfiles"
     dotter
     echo -e "${OK} Dotfiles processed successfully."
