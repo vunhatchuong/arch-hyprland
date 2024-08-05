@@ -1,4 +1,5 @@
 # 0 is True, 1 is False
+
 _isInstalled() {
     local package="$1"
     if pacman -Qi "${package}" &>/dev/null; then
@@ -6,7 +7,18 @@ _isInstalled() {
     fi
     return 1
 }
-_isInstalledYay() {
+
+_isAvailable() {
+    local PkgIn=$1
+
+    if pacman -Si "${PkgIn}" &> /dev/null; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+_isAvailableYay() {
     local package="$1"
     if yay -Si "${package}" &>/dev/null; then
         return 0
@@ -33,7 +45,7 @@ _installWithYay() {
 _uninstall_package() {
     toUninstall=()
     for pkg; do
-        if [[ $(_isInstalledYay "${pkg}") != 0 ]]; then
+        if [[ $(_isInstalled "${pkg}") != 0 ]]; then
             continue
         fi
         toUninstall+=("${pkg}")

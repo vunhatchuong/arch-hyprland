@@ -16,12 +16,12 @@ while read -r pkg; do
 
     if _isInstalled "${pkg}"; then
         echo -e "${OK} ${pkg} is already installed..."
-    elif _isInstalled "${pkg}"; then
+    elif _isAvailable "${pkg}"; then
         repo=$(pacman -Si "${pkg}" | awk -F ': ' '/Repository / {print $2}')
-        echo -e "${PACMAN} ${pkg} will install from official arch repo..."
+        echo -e "${PACMAN} ${pkg} will install with Pacman..."
         archPkg+=("${pkg}")
-    elif _isInstalledYay "${pkg}"; then
-        echo -e "${YAY} ${pkg} will install from arch user repo..."
+    elif _isAvailableYay "${pkg}"; then
+        echo -e "${YAY} ${pkg} will install from AUR..."
         aurhPkg+=("${pkg}")
     else
         echo "${ERROR}Error: unknown package ${pkg}..."
