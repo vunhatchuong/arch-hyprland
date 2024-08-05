@@ -1,0 +1,92 @@
+# --------------------------------------------------- // System
+pipewire                                               # audio/video server
+pipewire-alsa                                          # pipewire alsa client
+pipewire-audio                                         # pipewire audio client
+pipewire-jack                                          # pipewire jack client
+pipewire-pulse                                         # pipewire pulseaudio client
+gst-plugin-pipewire                                    # pipewire gstreamer client
+wireplumber                                            # pipewire session manager
+pavucontrol                                            # pulseaudio volume control
+pamixer                                                # pulseaudio cli mixer
+networkmanager                                         # network manager
+network-manager-applet                                 # network manager system tray utility
+bluez                                                  # bluetooth protocol stack
+bluez-utils                                            # bluetooth utility cli
+blueman                                                # bluetooth manager gui
+brightnessctl                                          # screen brightness control
+udiskie                                                # manage removable media
+
+# --------------------------------------------------- // Display Manager
+# Install with ly.sh
+#ly                                                   # display manager for KDE plasma
+
+# --------------------------------------------------- // Window Manager
+hyprland                                               # wlroots-based wayland compositor
+hyprcursor                                             # cursor
+dunst                                                  # notification daemon
+fuzzel                                                 # application launcher
+waybar                                                 # system bar
+swaybg                                                 # wallpaper
+hypridle                                               # Idle daemon
+hyprlock                                               # lock screen
+wlogout                                                # logout menu
+#flameshot-git
+# --- Screenshot stack equal to flameshot
+grim                                                   # Grab images from a Wayland compositor
+slurp
+wl-clipboard
+satty
+# ---
+hyprpicker                                             # color picker
+pyprland                                               # Extends Hyprland functionality
+
+# --------------------------------------------------- // Dependencies
+polkit-gnome                                           # authentication agent
+xdg-desktop-portal-hyprland                            # Portal for hyprland
+xdg-desktop-portal-gtk                                 # Portal for gtk
+pacman-contrib                                         # for system update check
+jq                                                     # for json processing
+imagemagick                                            # for image processing
+
+# --------------------------------------------------- // Theming
+nwg-look                                               # gtk configuration tool
+qt5ct                                                  # qt5 configuration tool
+qt6ct                                                  # qt6 configuration tool
+kvantum                                                # svg based qt6 theme engine
+
+# --------------------------------------------------- // Applications
+firefox                                                # browser
+foot                                                   # terminal
+thunar                                                 # File manager
+thunar-volman                                          # Auto management of removable devices
+tumbler                                                # Thumbnails
+ffmpegthumbnailer                                      # Thumbnails
+file-roller                                            # Archiver
+thunar-archive-plugin                                  # Archiver
+#ark                                                    # kde file archiver
+neovim                                                 # terminal text editor
+code                                                   # ide text editor
+tmux                                                   # terminal multiplexer
+mpv                                                    # video player
+mpv-mpris                                              # mpv mpris support
+
+# --------------------------------------------------- // Shell
+zsh                                                    # zsh shell
+fastfetch                                              # system information fetch tool
+fd                                                     # Better find
+bat                                                    # Better cat
+lazygit                                                # Git UI
+eza                                                    # Better ls
+zoxide                                                 # Better cd
+starship                                               # customizable shell prompt
+fzf                                                    # fuzzy finder
+tre-command                                            # Better tree
+btop                                                   # system resource monitor
+dust                                                   # Disk usage analyzer
+ripgrep                                                # Better grep
+duf                                                    # Disk Usage
+tldr                                                   # command line man pages
+hyperfine                                              # Benchmark
+# --------------------------------------------------- // Font
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
