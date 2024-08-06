@@ -17,7 +17,7 @@ brightnessctl                                          # screen brightness contr
 udiskie                                                # manage removable media
 #ibus-bamboo                                            # Vietnamese input method
 fcitx5-unikey                                          # unikey input method
-fcitx5-config-qt                                       # required for fcitx5 to work
+#fcitx5-configtool                                      # GUI for fcitx5 config
 
 # --------------------------------------------------- // Display Manager
 # Install with ly.sh
