@@ -11,5 +11,7 @@
 nvidia="Y"
 ###-Install Snapper (BTRFS Only)?
 snapper="Y"
+###-Install Developer Tools?
+developer="Y"
 ###-Do you want to download pre-configured Hyprland dotfiles?
 dots="Y"
