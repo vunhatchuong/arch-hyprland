@@ -15,6 +15,9 @@ bluez-utils                                            # bluetooth utility cli
 blueman                                                # bluetooth manager gui
 brightnessctl                                          # screen brightness control
 udiskie                                                # manage removable media
+#ibus-bamboo                                            # Vietnamese input method
+fcitx5-unikey                                          # unikey input method
+fcitx5-config-qt                                       # required for fcitx5 to work
 
 # --------------------------------------------------- // Display Manager
 # Install with ly.sh
@@ -69,6 +72,7 @@ code                                                   # ide text editor
 tmux                                                   # terminal multiplexer
 mpv                                                    # video player
 mpv-mpris                                              # mpv mpris support
+bleachbit                                              # disk cleaner
 
 # --------------------------------------------------- // Shell
 zsh                                                    # zsh shell
@@ -76,6 +80,7 @@ fastfetch                                              # system information fetc
 fd                                                     # Better find
 bat                                                    # Better cat
 lazygit                                                # Git UI
+lazydocker                                             # Docker UI
 eza                                                    # Better ls
 zoxide                                                 # Better cd
 starship                                               # customizable shell prompt
@@ -87,6 +92,8 @@ ripgrep                                                # Better grep
 duf                                                    # Disk Usage
 tldr                                                   # command line man pages
 hyperfine                                              # Benchmark
+yazi                                                   # TUI file manager
+
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
