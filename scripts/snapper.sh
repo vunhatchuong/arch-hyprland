@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed btrfs-assistant
+yay -S --noconfirm --needed btrfs-assistant-git
 yay -S --noconfirm --needed grub-btrfs
 yay -S --noconfirm --needed snap-pac-git
 yay -S --noconfirm --needed snapper
