@@ -3,6 +3,7 @@
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
 source "${scrDir}/library/header.sh"
+source "${scrDir}/library/dialog.sh"
 
 echo
 ask_yes_no "-Do you want to setup env for Node?" node
@@ -27,5 +28,5 @@ ask_yes_no "-Do you want to setup env for Golang?" golang
 if [ "$golang" == "Y" ]; then
     echo "${INFO} - installing Gobrew version manager"
     curl -sL https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
-    gobrew
+    ${HOME}/.gobrew/bin/gobrew
 fi
