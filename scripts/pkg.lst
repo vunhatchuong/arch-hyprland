@@ -38,7 +38,7 @@ wlogout                                                # logout menu
 grim                                                   # Grab images from a Wayland compositor
 slurp
 wl-clipboard
-satty
+satty-bin
 # ---
 hyprpicker                                             # color picker
 pyprland                                               # Extends Hyprland functionality
