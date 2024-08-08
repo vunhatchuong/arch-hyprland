@@ -13,6 +13,8 @@ if [ "$node" == "Y" ]; then
         echo -e "\e[1A\e[K${ERROR} - fnm installation failed"
         exit 1
     }
+    echo "${INFO} - installing Node LTS version"
+    fnm install --lts
 fi
 
 echo
