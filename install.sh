@@ -22,7 +22,7 @@ execute_script "installer.sh"
 echo
 ask_yes_no "-Do you have any nvidia gpu in your system?" nvidia
 echo
-ask_yes_no "-Install developers tools?" dev
+ask_yes_no "-Install developers tools?" developer
 echo
 ask_yes_no "-Install Snapper?" snapper
 echo
@@ -39,7 +39,7 @@ execute_script "gtk.sh"
 
 execute_script "zsh.sh"
 
-if [ "$dev" == "Y" ]; then
+if [ "$developer" == "Y" ]; then
     execute_script "developer.sh"
 fi
 

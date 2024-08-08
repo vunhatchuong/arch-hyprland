@@ -22,7 +22,7 @@ if [ "$python" == "Y" ]; then
     echo "${INFO} - installing Micromamba"
     "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
     echo "${INFO} - Create folder manually since the script is bad"
-    mkdir ${HOME}}/micromamba
+    mkdir ${HOME}/micromamba
 fi
 
 echo
