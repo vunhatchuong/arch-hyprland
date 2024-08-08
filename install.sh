@@ -22,11 +22,11 @@ execute_script "installer.sh"
 echo
 ask_yes_no "-Do you have any nvidia gpu in your system?" nvidia
 echo
-ask_yes_no "-Install developers tools?" developer
-echo
 ask_yes_no "-Install Snapper?" snapper
 echo
 ask_yes_no "-Download pre-configured Hyprland dotfiles?" dots
+echo
+ask_yes_no "-Install developers tools?" developer
 echo
 
 if [ "$nvidia" == "Y" ]; then
@@ -39,10 +39,6 @@ execute_script "gtk.sh"
 
 execute_script "zsh.sh"
 
-if [ "$developer" == "Y" ]; then
-    execute_script "developer.sh"
-fi
-
 if [ "$snapper" == "Y" ]; then
     execute_script "snapper.sh"
 fi
@@ -51,7 +47,10 @@ execute_script "system_enable.sh"
 
 if [ "$dots" == "Y" ]; then
     execute_script "dotfiles.sh"
+fi
 
+if [ "$developer" == "Y" ]; then
+    execute_script "developer.sh"
 fi
 
 printf "\n${OK} Installation Completed.\n"
