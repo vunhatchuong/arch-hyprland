@@ -1,6 +1,9 @@
 #!/bin/bash
 
 source scripts/library/header.sh
+source scripts/library/library.sh
+source scripts/library/dialog.sh
+script_directory=scripts
 
 read -p "${CAT} Would you like to Use Preset Settings? (y/n): " use_preset
 
@@ -8,14 +11,8 @@ if [[ $use_preset = [Yy] ]]; then
     source ./preset.sh
 fi
 
-source scripts/library/library.sh
-
-script_directory=scripts
-
 echo "${INFO} Updating Pacman...."
 sudo pacman -Sy
-
-source scripts/library/dialog.sh
 
 execute_script "installer.sh"
 
@@ -56,6 +53,14 @@ fi
 printf "\n${OK} Installation Completed.\n"
 printf "\n"
 sleep 2
+
+if [ "$snapper" == "Y" ]; then
+    read -p "${NOTE} Reminder: Run btrfs-assistant to configure snapper"
+fi
+
+if [ "$developer" == "Y" ]; then
+    read -p "${NOTE} Reminder: Run 'vfox use -g' after reboot"
+fi
 
 read -rp "${CAT} Would you like to reboot now? (y/n): " HYP
 

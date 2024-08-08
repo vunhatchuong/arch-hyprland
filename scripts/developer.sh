@@ -12,14 +12,10 @@ _installWithYay "vfox-bin"
 }
 echo "${INFO} - Install Version Fox successfully"
 
-echo "${INFO} - Change shell to zsh"
-zsh
-
 echo
 ask_yes_no "-Do you want to setup env for Node?" node
 if [ "$node" == "Y" ]; then
     vfox install nodejs
-    vfox use -g nodejs
 fi
 
 echo
@@ -36,13 +32,10 @@ echo
 ask_yes_no "-Do you want to setup env for Golang?" golang
 if [ "$golang" == "Y" ]; then
     vfox install golang
-    vfox use -g golang
 fi
 
 ask_yes_no "-Do you want to setup env for Java and Maven?" java
 if [ "$java" == "Y" ]; then
     vfox install java
-    vfox use -g java
     vfox install maven
-    vfox use -g maven
 fi
