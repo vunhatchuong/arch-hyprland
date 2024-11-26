@@ -97,3 +97,6 @@ yazi                                                   # TUI file manager
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
+
+intellij-idea-community-edition
+git-credential-manager-bin                             # Run git-credential-manager configure after
