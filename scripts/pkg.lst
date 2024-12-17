@@ -93,6 +93,7 @@ duf                                                    # Disk Usage
 tldr                                                   # command line man pages
 hyperfine                                              # Benchmark
 yazi                                                   # TUI file manager
+git-delta                                              # Syntax highlight for git
 
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono
