@@ -95,6 +95,7 @@ hyperfine                                              # Benchmark
 yazi                                                   # TUI file manager
 git-delta                                              # Syntax highlight for git
 chafa                                                  # Image previewer
+jq                                                     # JSON parser
 
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono
