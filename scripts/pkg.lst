@@ -58,7 +58,7 @@ qt6ct                                                  # qt6 configuration tool
 kvantum                                                # svg based qt6 theme engine
 
 # --------------------------------------------------- // Applications
-firefox                                                # browser
+zen-browser-bin                                        # browser
 foot                                                   # terminal
 thunar                                                 # File manager
 thunar-volman                                          # Auto management of removable devices
