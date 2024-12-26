@@ -96,6 +96,7 @@ yazi                                                   # TUI file manager
 git-delta                                              # Syntax highlight for git
 chafa                                                  # Image previewer
 jq                                                     # JSON parser
+broot                                                  # Navigation
 
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono
