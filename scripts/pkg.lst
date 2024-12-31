@@ -60,6 +60,7 @@ kvantum                                                # svg based qt6 theme eng
 # --------------------------------------------------- // Applications
 zen-browser-bin                                        # browser
 foot                                                   # terminal
+ghostty                                                # terminal
 thunar                                                 # File manager
 thunar-volman                                          # Auto management of removable devices
 tumbler                                                # Thumbnails
@@ -73,6 +74,7 @@ tmux                                                   # terminal multiplexer
 mpv                                                    # video player
 mpv-mpris                                              # mpv mpris support
 bleachbit                                              # disk cleaner
+obsidian                                               # note taking
 
 # --------------------------------------------------- // Shell
 zsh                                                    # zsh shell
