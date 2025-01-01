@@ -14,21 +14,8 @@ Personalize for my [dotfiles](https://github.com/vunhatchuong/.dotfiles).
 
 ## Apps
 
-> [!NOTE]
-> Wireplumber currently has a [bug](https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/2669)
-that will draws power from camera even when not used.
-> The temporary fix is to make a file inside `~/.config/wireplumber/wireplumber.conf.d/10-disable-camera.conf`
-with the following content:
->```
->wireplumber.profiles = {
->  main = {
->    monitor.libcamera = disabled
->  }
->}
->```
-
-- Dotfiles manager: [dotter](https://github.com/SuperCuber/dotter/)
-- Zsh plugin manager: [zap](https://github.com/zap-zsh/zap)
+ Dotfiles manager: [dotter](https://github.com/SuperCuber/dotter/)
+ Zsh plugin manager: [zap](https://github.com/zap-zsh/zap)
 
 ## Theme
 
