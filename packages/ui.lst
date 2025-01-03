@@ -1,0 +1,79 @@
+# --------------------------------------------------- // System
+pipewire                                               # Audio/video server
+pipewire-alsa                                          # Alsa client
+pipewire-audio                                         # Audio client
+pipewire-jack                                          # Jack client
+pipewire-pulse                                         # Pulseaudio client
+gst-plugin-pipewire                                    # Gstreamer client
+wireplumber                                            # Session manager
+pavucontrol                                            # Volume control
+pamixer                                                # CLI mixer
+networkmanager                                         # Network manager
+network-manager-applet                                 # Network manager system tray utility
+bluez                                                  # Bluetooth protocol stack
+bluez-utils                                            # Bluetooth utility CLI
+blueman                                                # Bluetooth manager GUI
+brightnessctl                                          # Screen brightness control
+udiskie                                                # Manage removable media
+#ibus-bamboo                                            # Vietnamese input method
+fcitx5-unikey                                          # Unikey input method
+#fcitx5-configtool                                      # GUI for fcitx5 config
+
+# --------------------------------------------------- // Display Manager
+#ly                                                    # Install with ly.sh instead
+
+# --------------------------------------------------- // Window Manager
+hyprland                                               # WM
+hyprcursor                                             # Cursor
+dunst                                                  # Notification daemon
+fuzzel                                                 # App launcher
+waybar                                                 # System bar
+swaybg                                                 # Wallpaper
+hypridle                                               # Idle daemon
+hyprlock                                               # Lock screen
+wlogout                                                # Logout menu
+#flameshot-git
+
+# --- Screenshot stack equal to flameshot
+grim                                                   # Grab images from a Wayland compositor
+slurp
+wl-clipboard
+satty-bin
+# ---
+
+hyprpicker                                             # Color picker
+pyprland                                               # Extends Hyprland functionality
+
+# --------------------------------------------------- // Dependencies
+polkit-gnome                                           # Authentication agent
+xdg-desktop-portal-hyprland                            # Portal for hyprland
+xdg-desktop-portal-gtk                                 # Portal for gtk
+
+# --------------------------------------------------- // Theming
+nwg-look                                               # GTK config tool
+qt5ct                                                  # Qt5 config tool
+qt6ct                                                  # Qt6 config tool
+kvantum                                                # SVG based Qt6 theme engine
+
+# --------------------------------------------------- // Applications
+zen-browser-bin                                        # Browser
+foot                                                   # Term
+ghostty                                                # Term
+thunar                                                 # File manager
+thunar-volman                                          # Auto management of removable devices
+tumbler                                                # Thumbnails
+ffmpegthumbnailer                                      # Thumbnails
+file-roller                                            # Archiver
+thunar-archive-plugin                                  # Archiver
+#ark                                                    # KDE file archiver
+code                                                   # VSCode
+mpv                                                    # Video player
+mpv-mpris                                              # MPV mpris support
+bleachbit                                              # Disk cleaner
+obsidian                                               # Note taking
+
+# --------------------------------------------------- // Font
+ttf-jetbrains-mono-nerd
+ttf-roboto-mono-nerd
+
+intellij-idea-community-edition                        # Intellij

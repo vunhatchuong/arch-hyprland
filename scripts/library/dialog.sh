@@ -39,7 +39,7 @@ ask_yes_no() {
 
 execute_script() {
     local script="$1"
-    local script_path="$script_directory/$script"
+    local script_path="$SCRIPT_DIR/$script"
 
     if [ -f "$script_path" ]; then
         env USE_PRESET=$use_preset "$script_path"

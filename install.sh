@@ -1,9 +1,13 @@
 #!/bin/bash
 
-source scripts/library/header.sh
-source scripts/library/library.sh
-source scripts/library/dialog.sh
-script_directory=scripts
+ROOT_DIR=$(dirname "$(realpath "$0")")
+SCRIPT_DIR="${ROOT_DIR}/scripts"
+PACKAGES_DIR="${ROOT_DIR}/packages"
+
+source "${SCRIPT_DIR}/library/color.sh"
+source "${SCRIPT_DIR}/library/dialog.sh"
+source "${SCRIPT_DIR}/library/library.sh"
+source "${SCRIPT_DIR}/library/package_installer.sh"
 
 read -p "${CAT} Would you like to Use Preset Settings? (y/n): " use_preset
 
@@ -14,7 +18,7 @@ fi
 echo "${INFO} Updating Pacman...."
 sudo pacman -Sy
 
-execute_script "installer.sh"
+install_packages_from_list "common"
 
 echo
 ask_yes_no "-Do you have any nvidia gpu in your system?" nvidia
@@ -27,10 +31,10 @@ ask_yes_no "-Install developers tools?" developer
 echo
 
 if [ "$ui" == "Y" ]; then
-    execute_script "ui.sh"
+    install_packages_from_list "ui"
 fi
 
-if [ "$nvidia" == "Y" ] && [ "$ui" == "Y" ]; then
+if [ "$nvidia" == "Y" ]; then
     execute_script "nvidia.sh"
 fi
 
@@ -65,11 +69,11 @@ printf "\n"
 sleep 2
 
 if [ "$snapper" == "Y" ]; then
-    read -p "${NOTE} Reminder: Run btrfs-assistant to configure snapper"
+    read -p "${CAT} Reminder: Run btrfs-assistant to configure snapper"
 fi
 
 if [ "$developer" == "Y" ]; then
-    read -p "${NOTE} Reminder: Run 'vfox use -g' after reboot"
+    read -p "${CAT} Reminder: Run 'vfox use -g' after reboot"
 fi
 
 # Remove EndeavourOS ugly Grub theme

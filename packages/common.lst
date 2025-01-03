@@ -1,5 +1,5 @@
 pacman-contrib                                         # for system update check
-reflection                                             # for system update check
+reflector                                              # for system update check
 
 # --------------------------------------------------- // Shell
 zsh                                                    # ZSH shell
@@ -15,7 +15,7 @@ eza                                                    # Better ls
 bat                                                    # Better cat
 fd                                                     # Better find
 ripgrep                                                # Better grep
-btop                                                   # System resource monitor
+btop                                                   # Resource monitor
 fzf                                                    # fuzzy finder
 zoxide                                                 # Better cd
 
@@ -31,4 +31,4 @@ yazi                                                   # TUI file manager
 chafa                                                  # Image previewer
 dust                                                   # Disk usage analyzer
 duf                                                    # Disk Usage
-tldr                                                   # TL;DR for man pages
+tldr                                                   # TLDR for man pages

@@ -55,6 +55,6 @@ _uninstall_package() {
         toUninstall+=("${package}")
     done
 
-    printf "${NOTE} Uninstalling:\n%s\n" "${toUninstall[@]}"
+    printf "${CAT} Uninstalling:\n%s\n" "${toUninstall[@]}"
     sudo pacman -Rns --noconfirm "${toUninstall[@]}"
 }
