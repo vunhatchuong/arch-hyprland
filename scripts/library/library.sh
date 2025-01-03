@@ -9,8 +9,8 @@ _isInstalled() {
 }
 
 _isAvailable() {
-    local PkgIn=$1
-    if pacman -Si "${PkgIn}" &> /dev/null; then
+    local package=$1
+    if pacman -Si "${package}" &>/dev/null; then
         return 0
     fi
     return 1
@@ -25,7 +25,7 @@ _isAvailableYay() {
 }
 
 _installWithPacman() {
-    if [[ $(_isInstalled "$1") == 0 ]]; then
+    if _isInstalled "$1"; then
         echo "${OK} $1 is already installed."
     else
         sudo pacman -S --noconfirm "$1"
@@ -33,7 +33,7 @@ _installWithPacman() {
 }
 
 _installWithYay() {
-    if [[ $(_isInstalled "$1") == 0 ]]; then
+    if _isInstalled "$1"; then
         echo "${OK} $1 is already installed."
     else
         yay -S --noconfirm "$1"
@@ -41,16 +41,20 @@ _installWithYay() {
 }
 
 _uninstall_package() {
-    toUninstall=()
-    for pkg; do
-        if [[ $(_isInstalled "${pkg}") != 0 ]]; then
+    local to_uninstall=()
+    for package in "$@"; do
+        if _is_installed "${package}"; then
+            to_uninstall+=("${package}")
+        fi
+    done
+
+    for package; do
+        if [[ $(_isInstalled "${package}") != 0 ]]; then
             continue
         fi
-        toUninstall+=("${pkg}")
+        toUninstall+=("${package}")
     done
-    if [[ "${toUninstall[@]}" == "" ]]; then
-        return
-    fi
+
     printf "${NOTE} Uninstalling:\n%s\n" "${toUninstall[@]}"
     sudo pacman -Rns --noconfirm "${toUninstall[@]}"
 }
