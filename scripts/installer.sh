@@ -4,7 +4,7 @@ scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
 source "${scrDir}/library/color.sh"
 
-listPkg="${scrDir}/pkg.lst"
+listPkg="${scrDir}/packages/common.lst"
 archPkg=()
 aurhPkg=()
 

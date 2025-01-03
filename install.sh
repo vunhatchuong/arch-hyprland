@@ -26,21 +26,31 @@ echo
 ask_yes_no "-Install developers tools?" developer
 echo
 
-if [ "$nvidia" == "Y" ]; then
+if [ "$ui" == "Y" ]; then
+    execute_script "ui.sh"
+fi
+
+if [ "$nvidia" == "Y" ] && [ "$ui" == "Y" ]; then
     execute_script "nvidia.sh"
 fi
 
-execute_script "ly.sh"
+if [ "$ui" == "Y" ]; then
+    execute_script "ly.sh"
+fi
 
-execute_script "gtk.sh"
+if [ "$ui" == "Y" ]; then
+    execute_script "gtk.sh"
+fi
 
 execute_script "zsh.sh"
 
-if [ "$snapper" == "Y" ]; then
+if [ "$snapper" == "Y" ] && [ "$ui" == "Y" ]; then
     execute_script "snapper.sh"
 fi
 
-execute_script "system_enable.sh"
+if [ "$ui" == "Y" ]; then
+    execute_script "system_enable.sh"
+fi
 
 if [ "$dots" == "Y" ]; then
     execute_script "dotfiles.sh"
