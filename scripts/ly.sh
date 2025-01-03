@@ -2,7 +2,7 @@
 
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
-source "${scrDir}/library/header.sh"
+source "${scrDir}/library/color.sh"
 
 printf "${INFO} Installing Ly........\n"
 _installWithYay "ly"
@@ -21,12 +21,5 @@ done
 
 printf " Activating Ly service........\n"
 sudo systemctl enable ly.service
-
-if grep -qi "EndeavourOS" /etc/os-release; then
-    echo "${INFO} EndeavourOS detected, removing GRUB theme"
-    sudo cp /etc/default/grub /etc/default/grub.bak
-    sudo sed -i 's|.*GRUB_BACKGROUND=.*|#GRUB_BACKGROUND=|' /etc/default/grub
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-fi
 
 clear

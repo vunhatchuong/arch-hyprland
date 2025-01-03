@@ -2,10 +2,10 @@
 
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
-source "${scrDir}/library/header.sh"
+source "${scrDir}/library/color.sh"
 
 echo "${INFO} Cloning GTK themes and Icons repository..."
-if git clone https://github.com/pwyde/monochrome-kde.git; then
+if git clone --depth 1 https://github.com/pwyde/monochrome-kde.git; then
     mkdir -p ~/.icons
     mkdir -p ~/.themes
     cd monochrome-kde
@@ -16,7 +16,7 @@ else
     echo "${ERROR} Download failed for GTK themes.."
 fi
 
-if git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git; then
+if git clone --depth 1 https://github.com/vinceliuice/Tela-circle-icon-theme.git; then
     cd Tela-circle-icon-theme
     echo "${INFO} Install Tela-circle-icon-theme to ~/.icons folder."
     chmod +x install.sh

@@ -2,7 +2,7 @@
 
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
-source "${scrDir}/library/header.sh"
+source "${scrDir}/library/color.sh"
 source "${scrDir}/library/dialog.sh"
 
 _installWithYay "vfox-bin"
@@ -19,23 +19,11 @@ if [ "$node" == "Y" ]; then
 fi
 
 echo
-ask_yes_no "-Do you want to setup env for Python?" python
-if [ "$python" == "Y" ]; then
+ask_yes_no "-Do you want to setup Micromamba?" mmamba
+if [ "$mmamba" == "Y" ]; then
     cp assets/.condarc ~/
     echo "${INFO} - installing Micromamba"
     "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
     echo "${INFO} - Create folder manually since the script is bad"
     mkdir ${HOME}/micromamba
-fi
-
-echo
-ask_yes_no "-Do you want to setup env for Golang?" golang
-if [ "$golang" == "Y" ]; then
-    vfox install golang
-fi
-
-ask_yes_no "-Do you want to setup env for Java and Maven?" java
-if [ "$java" == "Y" ]; then
-    vfox install java
-    vfox install maven
 fi

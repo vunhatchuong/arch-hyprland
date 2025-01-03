@@ -2,7 +2,7 @@
 
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/library/library.sh"
-source "${scrDir}/library/header.sh"
+source "${scrDir}/library/color.sh"
 
 listPkg="${scrDir}/pkg.lst"
 archPkg=()

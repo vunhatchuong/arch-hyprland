@@ -62,6 +62,14 @@ if [ "$developer" == "Y" ]; then
     read -p "${NOTE} Reminder: Run 'vfox use -g' after reboot"
 fi
 
+# Remove EndeavourOS ugly Grub theme
+if grep -qi "EndeavourOS" /etc/os-release; then
+    echo "${INFO} EndeavourOS detected, removing GRUB theme"
+    sudo cp /etc/default/grub /etc/default/grub.bak
+    sudo sed -i 's|.*GRUB_BACKGROUND=.*|#GRUB_BACKGROUND=|' /etc/default/grub
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+fi
+
 read -rp "${CAT} Would you like to reboot now? (y/n): " HYP
 
 if [[ "$HYP" =~ ^[Yy]$ ]]; then

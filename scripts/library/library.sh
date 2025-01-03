@@ -10,12 +10,10 @@ _isInstalled() {
 
 _isAvailable() {
     local PkgIn=$1
-
     if pacman -Si "${PkgIn}" &> /dev/null; then
         return 0
-    else
-        return 1
     fi
+    return 1
 }
 
 _isAvailableYay() {

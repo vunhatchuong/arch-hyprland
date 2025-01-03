@@ -3,6 +3,7 @@ colorize_prompt() {
     local message="$2"
     echo -n "${color}${message}$(tput sgr0)"
 }
+
 # Function to ask a yes/no question and set the response in a variable
 ask_yes_no() {
     if [[ ! -z "${!2}" ]]; then
