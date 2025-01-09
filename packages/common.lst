@@ -32,3 +32,4 @@ chafa                                                  # Image previewer
 dust                                                   # Disk usage analyzer
 duf                                                    # Disk Usage
 tldr                                                   # TLDR for man pages
+tmuxp
