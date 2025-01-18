@@ -31,5 +31,5 @@ yazi                                                   # TUI file manager
 chafa                                                  # Image previewer
 dust                                                   # Disk usage analyzer
 duf                                                    # Disk Usage
-tldr                                                   # TLDR for man pages
+tealdeer                                               # TLDR for man pages
 tmuxp
