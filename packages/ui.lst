@@ -77,3 +77,7 @@ ttf-jetbrains-mono-nerd
 ttf-roboto-mono-nerd
 
 intellij-idea-community-edition                        # Intellij
+
+# PDF Viewer
+zathura
+sioyek
