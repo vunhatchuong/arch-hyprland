@@ -71,6 +71,7 @@ mpv                                                    # Video player
 mpv-mpris                                              # MPV mpris support
 bleachbit                                              # Disk cleaner
 obsidian                                               # Note taking
+speedcrunch                                            # GUI calculator
 
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono-nerd
