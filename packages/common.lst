@@ -33,3 +33,5 @@ dust                                                   # Disk usage analyzer
 duf                                                    # Disk Usage
 tealdeer                                               # TLDR for man pages
 tmuxp
+xh                                                     # cURL alternative
+hurl                                                   # Run HTTP requests defined in plain text
