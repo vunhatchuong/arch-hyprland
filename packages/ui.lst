@@ -55,10 +55,16 @@ qt5ct                                                  # Qt5 config tool
 qt6ct                                                  # Qt6 config tool
 kvantum                                                # SVG based Qt6 theme engine
 
+# --------------------------------------------------- // Font
+ttf-jetbrains-mono-nerd
+ttf-roboto-mono-nerd
+ttf-maple-beta
+
 # --------------------------------------------------- // Applications
 zen-browser-bin                                        # Browser
 foot                                                   # Term
 ghostty                                                # Term
+# ------------------------- // Linux specific
 thunar                                                 # File manager
 thunar-volman                                          # Auto management of removable devices
 tumbler                                                # Thumbnails
@@ -66,20 +72,20 @@ ffmpegthumbnailer                                      # Thumbnails
 file-roller                                            # Archiver
 thunar-archive-plugin                                  # Archiver
 #ark                                                    # KDE file archiver
-code                                                   # VSCode
 mpv                                                    # Video player
 mpv-mpris                                              # MPV mpris support
+# -------------------------
+
+discord
 bleachbit                                              # Disk cleaner
+transmission-gtk                                       # BitTorrent client
 obsidian                                               # Note taking
 speedcrunch                                            # GUI calculator
-
-# --------------------------------------------------- // Font
-ttf-jetbrains-mono-nerd
-ttf-roboto-mono-nerd
-ttf-maple-beta
-
-intellij-idea-community-edition                        # Intellij
-
 # PDF Viewer
 zathura
 sioyek
+
+# --------------------------------------------------- // Devs
+code                                                   # VSCode
+intellij-idea-community-edition
+yaak-beta-bin
