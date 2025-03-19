@@ -36,3 +36,5 @@ tmuxp
 hyperfine                                              # Benchmark
 xh                                                     # cURL alternative
 hurl                                                   # Run HTTP requests defined in plain text
+
+carbonyl-bin                                           # Terminal Chromium-based browser
