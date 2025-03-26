@@ -58,7 +58,7 @@ kvantum                                                # SVG based Qt6 theme eng
 # --------------------------------------------------- // Font
 ttf-jetbrains-mono-nerd
 ttf-roboto-mono-nerd
-ttf-maple-beta
+maplemono-ttf-autohint
 
 # --------------------------------------------------- // Applications
 zen-browser-bin                                        # Browser
